@@ -9,6 +9,7 @@ import javax.ejb.TransactionAttributeType;
 import javax.inject.Inject;
 
 import com.nicholas.pucpr.appweb.dto.PostDTO;
+import com.nicholas.pucpr.appweb.repository.InMemoryRepository;
 import com.nicholas.pucpr.appweb.repository.PostRepository;
 
 @Stateless

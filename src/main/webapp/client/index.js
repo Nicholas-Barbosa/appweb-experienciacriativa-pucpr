@@ -3,7 +3,8 @@
  */
 function fetchData() {
 	var requestObject = new XMLHttpRequest();
-	requestObject.open("GET", "http://localhost:8080/AplicativoWeb/api/post", "true");
+	let endpoint ="http://"+ window.location.host.concat("/aplicativo/api/post")
+	requestObject.open("GET", endpoint, "true");
 	requestObject.onreadystatechange = function() { // Call a function when the state changes.
 		if (this.readyState === XMLHttpRequest.DONE) {
 			let post = JSON.parse(requestObject.response)[0];
@@ -17,3 +18,4 @@ function fetchData() {
 	requestObject.send();
 }
 fetchData();
+console.log(window.location.host)
